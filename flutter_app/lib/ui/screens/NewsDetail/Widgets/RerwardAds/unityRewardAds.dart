@@ -1,0 +1,35 @@
+import 'package:flutter/foundation.dart';
+import 'package:unity_ads_plugin/unity_ads_plugin.dart';
+
+void loadUnityRewardAd(String placementId) {
+  UnityAds.load(
+      placementId: placementId,
+      onComplete: (placementId) {
+        debugPrint('Load Complete $placementId');
+      },
+      onFailed: (placementId, error, message) {
+        debugPrint('Load Failed $placementId: $error $message');
+      });
+}
+
+void showUnityRewardAds(String placementId, {Function? onRewardEarned}) {
+  UnityAds.showVideoAd(
+    placementId: placementId,
+    onComplete: (placementId) {
+      debugPrint('Video Ad $placementId completed');
+      if (onRewardEarned != null) onRewardEarned();
+      loadUnityRewardAd(placementId);
+    },
+    onFailed: (placementId, error, message) {
+      debugPrint('Video Ad $placementId failed: $error $message');
+      if (onRewardEarned != null) onRewardEarned();
+      loadUnityRewardAd(placementId);
+    },
+    onStart: (placementId) => debugPrint('Video Ad $placementId started'),
+    onClick: (placementId) => debugPrint('Video Ad $placementId click'),
+    onSkipped: (placementId) {
+      debugPrint('Video Ad $placementId skipped');
+      loadUnityRewardAd(placementId);
+    },
+  );
+}
