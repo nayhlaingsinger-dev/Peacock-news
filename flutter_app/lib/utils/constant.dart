@@ -1,9 +1,9 @@
 //Please add your admin panel url here and make sure you do not add '/' at the end of the url
 
-const String baseUrl = "enter_your_admin_panel_url_here";
+const String baseUrl = "https://redpeacock.fxgalactic.space";
 const String databaseUrl = "$baseUrl/api/"; //Do not change
 
-const String shareNavigationWebUrl = "enter_your_website_url_here"; //use http:// or https:// here
+const String shareNavigationWebUrl = "https://redpeacock.fxgalactic.space"; //use http:// or https:// here
 
 const int limitOfAPIData = 10;
 const int limitOfStyle1 = 3;

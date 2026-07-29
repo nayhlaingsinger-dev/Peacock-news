@@ -1711,7 +1711,7 @@ class ApiController extends Controller
                 $news->join('tbl_location', 'tbl_news.location_id', '=', 'tbl_location.id', 'left')
                     ->selectRaw('SQRT(POW(111.2 * (tbl_location.latitude - ?), 2) + POW(111.2 * (? - tbl_location.longitude) * COS(RADIANS(tbl_location.latitude) / 57.3), 2)) AS distance', [$latitude, $longitude])
                     ->where(function ($q1) {
-                        $q1->having(DB::raw('distance <' . $this->nearest_location_measure . ' OR tbl_news.location_id = 0'));
+                        $q1->having(DB::raw('distance <' . $this->nearest_location_measure . ' OR tbl_news.location_id=. 0'));
                     })
                     ->orderByRaw('CASE WHEN distance IS NULL THEN 1 ELSE 0 END, distance ASC');
             } else {
@@ -2368,7 +2368,7 @@ class ApiController extends Controller
                 ->whereIn('content_type', ['video_upload', 'video_youtube', 'video_other']);
             if (isset($latitude) && isset($longitude) && $latitude != null && $longitude != null) {
                 $res->orderByRaw('CASE WHEN distance IS NULL THEN 1 ELSE 0 END, distance ASC')->where(function ($q2) use ($latitude, $longitude, $limit, $offset) {
-                    $q2->having(DB::raw('distance <' . $this->nearest_location_measure . ' OR tbl_news.location_id = 0'));
+                    $q2->having(DB::raw('distance <' . $this->nearest_location_measure . ' OR tbl_news.location_id=. 0'));
                 });
             } else {
                 $res->orderBy('tbl_news.id', 'DESC');
