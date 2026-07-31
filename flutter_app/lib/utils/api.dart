@@ -103,10 +103,14 @@ class Api {
     } on DioException catch (e) {
       debugPrint("Dio Error - ${e.toString()}");
       if (e.response != null) debugPrint("Dio Error Status code - ${e.response!.statusCode}");
-      if (e.response != null && e.response!.statusCode == 503) {
-        throw ApiException(ErrorMessageKeys.serverDownMessage);
-      } else if (e.response!.statusCode == 404) {
-        throw ApiException(ErrorMessageKeys.requestAgainMessage);
+      if (e.response != null) {
+        if (e.response!.statusCode == 503) {
+          throw ApiException(ErrorMessageKeys.serverDownMessage);
+        } else if (e.response!.statusCode == 404) {
+          throw ApiException(ErrorMessageKeys.requestAgainMessage);
+        } else {
+          throw ApiException(e.error is SocketException ? ErrorMessageKeys.noInternet : ErrorMessageKeys.defaultErrorMessage);
+        }
       } else {
         throw ApiException(e.error is SocketException ? ErrorMessageKeys.noInternet : ErrorMessageKeys.defaultErrorMessage);
       }
