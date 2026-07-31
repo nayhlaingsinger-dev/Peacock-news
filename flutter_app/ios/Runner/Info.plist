@@ -50,7 +50,7 @@
            </dict>
 	 <dict>
         <key>CFBundleURLName</key>
-        <string>YOUR_PACKAGE_NAME_HERE</string>
+        <string>com.redpeacock.news</string>
         <key>CFBundleURLSchemes</key>
         <array>
             <string>news</string>

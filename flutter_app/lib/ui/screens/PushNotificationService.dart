@@ -137,7 +137,7 @@ class PushNotificationService {
 
   Future<void> _startForegroundService() async {
     const AndroidNotificationDetails androidNotificationDetails =
-        AndroidNotificationDetails('YOUR_PACKAGE_NAME_HERE', 'news', channelDescription: 'your channel description', importance: Importance.max, priority: Priority.high, ticker: 'ticker');
+        AndroidNotificationDetails('com.redpeacock.news', 'news', channelDescription: 'your channel description', importance: Importance.max, priority: Priority.high, ticker: 'ticker');
     await flutterLocalNotificationsPlugin
         .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
         ?.startForegroundService(1, 'plain title', 'plain body', notificationDetails: androidNotificationDetails, payload: '');
@@ -181,7 +181,7 @@ Future<void> generateImageNotification(String title, String msg, String image, S
 
 Future<void> generateSimpleNotification(String title, String msg, String type) async {
   var androidPlatformChannelSpecifics = const AndroidNotificationDetails(
-      'YOUR_PACKAGE_NAME_HERE', //your package name
+      'com.redpeacock.news', //your package name
       'news',
       importance: Importance.max,
       priority: Priority.high,

@@ -1,4 +1,4 @@
-package YOUR_PACKAGE_NAME_HERE
+package com.redpeacock.news
 
 import io.flutter.embedding.android.FlutterActivity
 
