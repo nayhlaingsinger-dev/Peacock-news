@@ -1,0 +1,864 @@
+﻿2026-07-31T03:22:40.0220915Z Current runner version: '2.336.0'
+2026-07-31T03:22:40.0249703Z ##[group]Runner Image Provisioner
+2026-07-31T03:22:40.0250770Z Hosted Compute Agent
+2026-07-31T03:22:40.0251362Z Version: 20260707.563
+2026-07-31T03:22:40.0252084Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-07-31T03:22:40.0252830Z Build Date: 2026-07-07T19:33:50Z
+2026-07-31T03:22:40.0253604Z Worker ID: {a6ece5f9-c182-4a62-a5b6-1a983cd2a3d7}
+2026-07-31T03:22:40.0254355Z Azure Region: northcentralus
+2026-07-31T03:22:40.0255252Z ##[endgroup]
+2026-07-31T03:22:40.0256894Z ##[group]Operating System
+2026-07-31T03:22:40.0257547Z Ubuntu
+2026-07-31T03:22:40.0258096Z 24.04.4
+2026-07-31T03:22:40.0258687Z LTS
+2026-07-31T03:22:40.0259208Z ##[endgroup]
+2026-07-31T03:22:40.0259805Z ##[group]Runner Image
+2026-07-31T03:22:40.0260424Z Image: ubuntu-24.04
+2026-07-31T03:22:40.0261031Z Version: 20260720.247.2
+2026-07-31T03:22:40.0262375Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260720.247/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-31T03:22:40.0263966Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260720.247
+2026-07-31T03:22:40.0265173Z ##[endgroup]
+2026-07-31T03:22:40.0266404Z ##[group]GITHUB_TOKEN Permissions
+2026-07-31T03:22:40.0269230Z Contents: read
+2026-07-31T03:22:40.0269802Z Metadata: read
+2026-07-31T03:22:40.0270491Z Packages: read
+2026-07-31T03:22:40.0271020Z ##[endgroup]
+2026-07-31T03:22:40.0273259Z Secret source: Actions
+2026-07-31T03:22:40.0275298Z Prepare workflow directory
+2026-07-31T03:22:40.0740254Z Prepare all required actions
+2026-07-31T03:22:40.0813256Z Getting action download info
+2026-07-31T03:22:40.3040223Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-07-31T03:22:40.6729512Z Download action repository 'actions/setup-java@v4' (SHA:c1e323688fd81a25caa38c78aa6df2d33d3e20d9)
+2026-07-31T03:22:41.1226994Z Download action repository 'subosito/flutter-action@v2' (SHA:1a449444c387b1966244ae4d4f8c696479add0b2)
+2026-07-31T03:22:41.3105396Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-07-31T03:22:41.5880694Z Getting action download info
+2026-07-31T03:22:41.6589642Z Download action repository 'actions/cache@v5' (SHA:caa296126883cff596d87d8935842f9db880ef25)
+2026-07-31T03:22:41.8754445Z Complete job name: build
+2026-07-31T03:22:41.9658073Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-31T03:22:41.9669712Z ##[group]Run actions/checkout@v4
+2026-07-31T03:22:41.9670778Z with:
+2026-07-31T03:22:41.9671597Z   repository: nayhlaingsinger-dev/Peacock-news
+2026-07-31T03:22:41.9681405Z   token: ***
+2026-07-31T03:22:41.9682142Z   ssh-strict: true
+2026-07-31T03:22:41.9682769Z   ssh-user: git
+2026-07-31T03:22:41.9683416Z   persist-credentials: true
+2026-07-31T03:22:41.9684223Z   clean: true
+2026-07-31T03:22:41.9685018Z   sparse-checkout-cone-mode: true
+2026-07-31T03:22:41.9685911Z   fetch-depth: 1
+2026-07-31T03:22:41.9686530Z   fetch-tags: false
+2026-07-31T03:22:41.9687164Z   show-progress: true
+2026-07-31T03:22:41.9687853Z   lfs: false
+2026-07-31T03:22:41.9688572Z   submodules: false
+2026-07-31T03:22:41.9689301Z   set-safe-directory: true
+2026-07-31T03:22:41.9690059Z   allow-unsafe-pr-checkout: false
+2026-07-31T03:22:41.9691175Z ##[endgroup]
+2026-07-31T03:22:42.1093511Z Syncing repository: nayhlaingsinger-dev/Peacock-news
+2026-07-31T03:22:42.1098602Z ##[group]Getting Git version info
+2026-07-31T03:22:42.1100454Z Working directory is '/home/runner/work/Peacock-news/Peacock-news'
+2026-07-31T03:22:42.1102150Z [command]/usr/bin/git version
+2026-07-31T03:22:42.1208702Z git version 2.54.0
+2026-07-31T03:22:42.1243452Z ##[endgroup]
+2026-07-31T03:22:42.1261879Z Temporarily overriding HOME='/home/runner/work/_temp/5625d4f4-745a-4d91-bb2f-5ac71614af2c' before making global git config changes
+2026-07-31T03:22:42.1265279Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-31T03:22:42.1272319Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Peacock-news/Peacock-news
+2026-07-31T03:22:42.1338049Z Deleting the contents of '/home/runner/work/Peacock-news/Peacock-news'
+2026-07-31T03:22:42.1342674Z ##[group]Initializing the repository
+2026-07-31T03:22:42.1350174Z [command]/usr/bin/git init /home/runner/work/Peacock-news/Peacock-news
+2026-07-31T03:22:42.1491512Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-07-31T03:22:42.1494175Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-07-31T03:22:42.1496995Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-07-31T03:22:42.1498897Z hint: call:
+2026-07-31T03:22:42.1499618Z hint:
+2026-07-31T03:22:42.1500607Z hint: 	git config --global init.defaultBranch <name>
+2026-07-31T03:22:42.1502103Z hint:
+2026-07-31T03:22:42.1503409Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-07-31T03:22:42.1506141Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-07-31T03:22:42.1507980Z hint:
+2026-07-31T03:22:42.1508749Z hint: 	git branch -m <name>
+2026-07-31T03:22:42.1509676Z hint:
+2026-07-31T03:22:42.1511092Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-07-31T03:22:42.1528009Z Initialized empty Git repository in /home/runner/work/Peacock-news/Peacock-news/.git/
+2026-07-31T03:22:42.1543021Z [command]/usr/bin/git remote add origin https://github.com/nayhlaingsinger-dev/Peacock-news
+2026-07-31T03:22:42.1643351Z ##[endgroup]
+2026-07-31T03:22:42.1645278Z ##[group]Disabling automatic garbage collection
+2026-07-31T03:22:42.1646370Z [command]/usr/bin/git config --local gc.auto 0
+2026-07-31T03:22:42.1707389Z ##[endgroup]
+2026-07-31T03:22:42.1709078Z ##[group]Setting up auth
+2026-07-31T03:22:42.1710987Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-31T03:22:42.1741100Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-31T03:22:42.2218947Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-31T03:22:42.2257807Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-31T03:22:42.2499404Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-31T03:22:42.2542133Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-31T03:22:42.2786226Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-07-31T03:22:42.2830421Z ##[endgroup]
+2026-07-31T03:22:42.2832160Z ##[group]Fetching the repository
+2026-07-31T03:22:42.2844169Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +5074e59f662bd1380fa1d56220d364990beec389:refs/remotes/origin/main
+2026-07-31T03:22:43.3557864Z From https://github.com/nayhlaingsinger-dev/Peacock-news
+2026-07-31T03:22:43.3559352Z  * [new ref]         5074e59f662bd1380fa1d56220d364990beec389 -> origin/main
+2026-07-31T03:22:43.3600489Z ##[endgroup]
+2026-07-31T03:22:43.3601074Z ##[group]Determining the checkout info
+2026-07-31T03:22:43.3603449Z ##[endgroup]
+2026-07-31T03:22:43.3611600Z [command]/usr/bin/git sparse-checkout disable
+2026-07-31T03:22:43.3665755Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-07-31T03:22:43.3702356Z ##[group]Checking out the ref
+2026-07-31T03:22:43.3708484Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-07-31T03:22:43.9631076Z Switched to a new branch 'main'
+2026-07-31T03:22:43.9632343Z branch 'main' set up to track 'origin/main'.
+2026-07-31T03:22:43.9661274Z ##[endgroup]
+2026-07-31T03:22:43.9720461Z [command]/usr/bin/git log -1 --format=%H
+2026-07-31T03:22:43.9755592Z 5074e59f662bd1380fa1d56220d364990beec389
+2026-07-31T03:22:44.0082933Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-31T03:22:44.0085281Z ##[group]Run actions/setup-java@v4
+2026-07-31T03:22:44.0085620Z with:
+2026-07-31T03:22:44.0085847Z   distribution: zulu
+2026-07-31T03:22:44.0086078Z   java-version: 17
+2026-07-31T03:22:44.0086314Z   java-package: jdk
+2026-07-31T03:22:44.0086535Z   check-latest: false
+2026-07-31T03:22:44.0086796Z   server-id: github
+2026-07-31T03:22:44.0087019Z   server-username: GITHUB_ACTOR
+2026-07-31T03:22:44.0087284Z   server-password: GITHUB_TOKEN
+2026-07-31T03:22:44.0087546Z   overwrite-settings: true
+2026-07-31T03:22:44.0087799Z   job-status: success
+2026-07-31T03:22:44.0090737Z   token: ***
+2026-07-31T03:22:44.0090964Z ##[endgroup]
+2026-07-31T03:22:44.1753898Z ##[group]Installed distributions
+2026-07-31T03:22:44.1779158Z Trying to resolve the latest version from remote
+2026-07-31T03:22:44.1913106Z (node:2288) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-31T03:22:44.1914106Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-31T03:22:44.2904767Z Resolved latest version as 17.0.20+8
+2026-07-31T03:22:44.2906042Z Trying to download...
+2026-07-31T03:22:44.2907048Z Downloading Java 17.0.20+8 (Zulu) from https://cdn.azul.com/zulu/bin/zulu17.68.17-ca-jdk17.0.20-linux_x64.tar.gz ...
+2026-07-31T03:22:46.8451510Z Extracting Java archive...
+2026-07-31T03:22:46.8601790Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/68335561-b2c2-45f0-ab8d-e0bb73e5a78d -f /home/runner/work/_temp/71b4163c-decb-4b62-a50b-a715f4da6e10
+2026-07-31T03:22:49.7548645Z Java 17.0.20+8 was downloaded
+2026-07-31T03:22:49.7549030Z Setting Java 17.0.20+8 as the default
+2026-07-31T03:22:49.7560534Z Creating toolchains.xml for JDK version 17 from zulu
+2026-07-31T03:22:49.7640790Z Writing to /home/runner/.m2/toolchains.xml
+2026-07-31T03:22:49.7641822Z 
+2026-07-31T03:22:49.7641998Z Java configuration:
+2026-07-31T03:22:49.7642379Z   Distribution: zulu
+2026-07-31T03:22:49.7642726Z   Version: 17.0.20+8
+2026-07-31T03:22:49.7643178Z   Path: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:22:49.7643647Z 
+2026-07-31T03:22:49.7644806Z ##[endgroup]
+2026-07-31T03:22:49.7660068Z Creating settings.xml with server-id: github
+2026-07-31T03:22:49.7660449Z Writing to /home/runner/.m2/settings.xml
+2026-07-31T03:22:49.7957924Z ##[group]Run subosito/flutter-action@v2
+2026-07-31T03:22:49.7958244Z with:
+2026-07-31T03:22:49.7958440Z   channel: stable
+2026-07-31T03:22:49.7958644Z   architecture: X64
+2026-07-31T03:22:49.7958846Z   cache: false
+2026-07-31T03:22:49.7959056Z   pub-cache-path: default
+2026-07-31T03:22:49.7959285Z   dry-run: false
+2026-07-31T03:22:49.7959542Z   git-source: https://github.com/flutter/flutter.git
+2026-07-31T03:22:49.7959854Z env:
+2026-07-31T03:22:49.7960115Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:22:49.7960529Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:22:49.7960872Z ##[endgroup]
+2026-07-31T03:22:49.8020637Z ##[start-action display=Make yq tool available on Windows runners;id=__subosito_flutter-action.__run]
+2026-07-31T03:22:49.8032184Z ##[end-action id=__subosito_flutter-action.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-07-31T03:22:49.8034331Z ##[start-action display=Make setup script executable;id=__subosito_flutter-action.__run_2]
+2026-07-31T03:22:49.8556883Z ##[group]Run chmod +x "$GITHUB_ACTION_PATH/setup.sh"
+2026-07-31T03:22:49.8557384Z [36;1mchmod +x "$GITHUB_ACTION_PATH/setup.sh"[0m
+2026-07-31T03:22:49.8610733Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-07-31T03:22:49.8611113Z env:
+2026-07-31T03:22:49.8611388Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:22:49.8611814Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:22:49.8612169Z ##[endgroup]
+2026-07-31T03:22:49.8733147Z ##[end-action id=__subosito_flutter-action.__run_2;outcome=success;conclusion=success;duration_ms=69]
+2026-07-31T03:22:49.8736198Z ##[start-action display=Set action inputs;id=__subosito_flutter-action.flutter-action]
+2026-07-31T03:22:49.8773878Z ##[group]Run $GITHUB_ACTION_PATH/setup.sh -p \
+2026-07-31T03:22:49.8774320Z [36;1m$GITHUB_ACTION_PATH/setup.sh -p \[0m
+2026-07-31T03:22:49.8774971Z [36;1m  -n '' \[0m
+2026-07-31T03:22:49.8775295Z [36;1m  -f '' \[0m
+2026-07-31T03:22:49.8775578Z [36;1m  -a 'X64' \[0m
+2026-07-31T03:22:49.8775869Z [36;1m  -k '' \[0m
+2026-07-31T03:22:49.8776151Z [36;1m  -c '' \[0m
+2026-07-31T03:22:49.8776425Z [36;1m  -l '' \[0m
+2026-07-31T03:22:49.8776700Z [36;1m  -d 'default' \[0m
+2026-07-31T03:22:49.8777101Z [36;1m  -g 'https://github.com/flutter/flutter.git' \[0m
+2026-07-31T03:22:49.8777501Z [36;1m  stable[0m
+2026-07-31T03:22:49.8824005Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-07-31T03:22:49.8824411Z env:
+2026-07-31T03:22:49.8824893Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:22:49.8825363Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:22:49.8825776Z ##[endgroup]
+2026-07-31T03:22:50.0432418Z ##[end-action id=__subosito_flutter-action.flutter-action;outcome=success;conclusion=success;duration_ms=169]
+2026-07-31T03:22:50.0437754Z ##[start-action display=Cache Flutter;id=__subosito_flutter-action.cache-flutter]
+2026-07-31T03:22:50.0442247Z ##[end-action id=__subosito_flutter-action.cache-flutter;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-07-31T03:22:50.0444207Z ##[start-action display=Cache pub dependencies;id=__subosito_flutter-action.cache-pub]
+2026-07-31T03:22:50.0450896Z ##[end-action id=__subosito_flutter-action.cache-pub;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-07-31T03:22:50.0480012Z ##[start-action display=Run setup script;id=__subosito_flutter-action.__run_3]
+2026-07-31T03:22:50.0516760Z ##[group]Run $GITHUB_ACTION_PATH/setup.sh \
+2026-07-31T03:22:50.0517106Z [36;1m$GITHUB_ACTION_PATH/setup.sh \[0m
+2026-07-31T03:22:50.0517379Z [36;1m  -n '3.44.8' \[0m
+2026-07-31T03:22:50.0517601Z [36;1m  -a 'x64' \[0m
+2026-07-31T03:22:50.0517900Z [36;1m  -c '/opt/hostedtoolcache/flutter/stable-3.44.8-x64' \[0m
+2026-07-31T03:22:50.0518258Z [36;1m  -d '/home/runner/.pub-cache' \[0m
+2026-07-31T03:22:50.0518527Z [36;1m  stable[0m
+2026-07-31T03:22:50.0566937Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-07-31T03:22:50.0567288Z env:
+2026-07-31T03:22:50.0567559Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:22:50.0567969Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:22:50.0568302Z ##[endgroup]
+2026-07-31T03:22:50.2168115Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2026-07-31T03:22:50.2169310Z                                  Dload  Upload   Total   Spent    Left  Speed
+2026-07-31T03:22:50.2170241Z 
+2026-07-31T03:22:50.9486331Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2026-07-31T03:22:51.9489186Z   5 1473M    5 88.3M    0     0   120M      0  0:00:12 --:--:--  0:00:12  120M
+2026-07-31T03:22:52.9490323Z  18 1473M   18  273M    0     0   157M      0  0:00:09  0:00:01  0:00:08  157M
+2026-07-31T03:22:53.9485783Z  31 1473M   31  463M    0     0   169M      0  0:00:08  0:00:02  0:00:06  169M
+2026-07-31T03:22:54.9495700Z  44 1473M   44  659M    0     0   176M      0  0:00:08  0:00:03  0:00:05  176M
+2026-07-31T03:22:55.9483954Z  57 1473M   57  843M    0     0   178M      0  0:00:08  0:00:04  0:00:04  178M
+2026-07-31T03:22:56.9515853Z  69 1473M   69 1031M    0     0   179M      0  0:00:08  0:00:05  0:00:03  188M
+2026-07-31T03:22:57.9494814Z  82 1473M   82 1213M    0     0   180M      0  0:00:08  0:00:06  0:00:02  187M
+2026-07-31T03:22:58.3749967Z  94 1473M   94 1387M    0     0   179M      0  0:00:08  0:00:07  0:00:01  184M
+2026-07-31T03:22:58.3750878Z 100 1473M  100 1473M    0     0   180M      0  0:00:08  0:00:08 --:--:--  184M
+2026-07-31T03:23:49.0864433Z ##[end-action id=__subosito_flutter-action.__run_3;outcome=success;conclusion=success;duration_ms=59038]
+2026-07-31T03:23:49.0925703Z ##[group]Run flutter pub get
+2026-07-31T03:23:49.0926019Z [36;1mflutter pub get[0m
+2026-07-31T03:23:49.0970848Z shell: /usr/bin/bash -e {0}
+2026-07-31T03:23:49.0971113Z env:
+2026-07-31T03:23:49.0971387Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:23:49.0971837Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:23:49.0972296Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.8-x64/flutter
+2026-07-31T03:23:49.0972682Z   PUB_CACHE: /home/runner/.pub-cache
+2026-07-31T03:23:49.0972934Z ##[endgroup]
+2026-07-31T03:23:53.6391764Z Resolving dependencies...
+2026-07-31T03:23:54.8384180Z Downloading packages...
+2026-07-31T03:24:12.4149354Z + _flutterfire_internals 1.3.59 (1.3.75 available)
+2026-07-31T03:24:12.4150010Z + archive 4.0.9
+2026-07-31T03:24:12.4150351Z + args 2.7.0
+2026-07-31T03:24:12.4150702Z + async 2.13.1
+2026-07-31T03:24:12.4151069Z + audio_session 0.1.25 (0.2.4 available)
+2026-07-31T03:24:12.4151606Z + bloc 9.2.1
+2026-07-31T03:24:12.4151953Z + boolean_selector 2.1.2
+2026-07-31T03:24:12.4152370Z + cached_network_image 3.4.1
+2026-07-31T03:24:12.4152858Z + cached_network_image_platform_interface 4.1.1
+2026-07-31T03:24:12.4153403Z + cached_network_image_web 1.3.1
+2026-07-31T03:24:12.4153851Z + characters 1.4.1
+2026-07-31T03:24:12.4154210Z + charcode 1.4.0
+2026-07-31T03:24:12.4154809Z + chewie 1.13.1 (1.14.1 available)
+2026-07-31T03:24:12.4155259Z + clock 1.1.2
+2026-07-31T03:24:12.4155591Z + code_assets 1.2.1
+2026-07-31T03:24:12.4155954Z + collection 1.19.1
+2026-07-31T03:24:12.4156346Z + connectivity_plus 6.1.5 (7.3.1 available)
+2026-07-31T03:24:12.4156886Z + connectivity_plus_platform_interface 2.1.0
+2026-07-31T03:24:12.4157398Z + country_code_picker 3.4.1
+2026-07-31T03:24:12.4157789Z + cross_file 0.3.5+4
+2026-07-31T03:24:12.4158147Z + crypto 3.0.7
+2026-07-31T03:24:12.4158487Z + csslib 1.0.2
+2026-07-31T03:24:12.4158850Z + cupertino_icons 1.0.9
+2026-07-31T03:24:12.4159214Z + dbus 0.7.14
+2026-07-31T03:24:12.4159551Z + diacritic 0.1.6
+2026-07-31T03:24:12.4159888Z + dio 5.11.0
+2026-07-31T03:24:12.4160215Z + dio_web_adapter 2.2.1
+2026-07-31T03:24:12.4160643Z + dotted_border 2.1.0 (3.1.0 available)
+2026-07-31T03:24:12.4161140Z + equatable 2.1.0
+2026-07-31T03:24:12.4161470Z + fake_async 1.3.3
+2026-07-31T03:24:12.4161793Z + ffi 2.2.0
+2026-07-31T03:24:12.4162095Z + file 7.0.1
+2026-07-31T03:24:12.4162418Z + file_picker 8.3.7 (11.0.2 available)
+2026-07-31T03:24:12.4162865Z + file_selector_linux 0.9.4
+2026-07-31T03:24:12.4163256Z + file_selector_macos 0.9.5
+2026-07-31T03:24:12.4163655Z + file_selector_platform_interface 2.7.0
+2026-07-31T03:24:12.4164111Z + file_selector_windows 0.9.3+5
+2026-07-31T03:24:12.4164520Z + firebase_auth 5.7.0 (6.5.6 available)
+2026-07-31T03:24:12.4165306Z + firebase_auth_platform_interface 7.7.3 (9.0.5 available)
+2026-07-31T03:24:12.4165882Z + firebase_auth_web 5.15.3 (6.2.5 available)
+2026-07-31T03:24:12.4166342Z + firebase_core 3.15.2 (4.12.1 available)
+2026-07-31T03:24:12.4166875Z + firebase_core_platform_interface 6.0.3 (8.0.0 available)
+2026-07-31T03:24:12.4167419Z + firebase_core_web 2.24.1 (3.9.1 available)
+2026-07-31T03:24:12.4167898Z + firebase_messaging 15.2.10 (16.4.3 available)
+2026-07-31T03:24:12.4168496Z + firebase_messaging_platform_interface 4.6.10 (4.9.2 available)
+2026-07-31T03:24:12.4169436Z + firebase_messaging_web 3.10.10 (4.2.3 available)
+2026-07-31T03:24:12.4169911Z + fixnum 1.1.1
+2026-07-31T03:24:12.4170239Z + flex_color_picker 3.8.0
+2026-07-31T03:24:12.4170623Z + flex_seed_scheme 4.0.1
+2026-07-31T03:24:12.4171003Z + flick_video_player 0.9.0
+2026-07-31T03:24:12.4171389Z + flutter 0.0.0 from sdk flutter
+2026-07-31T03:24:12.4171779Z + flutter_bloc 9.1.1
+2026-07-31T03:24:12.4172127Z + flutter_cache_manager 3.4.2
+2026-07-31T03:24:12.4172529Z + flutter_inappwebview 6.1.5
+2026-07-31T03:24:12.4172937Z + flutter_inappwebview_android 1.1.3
+2026-07-31T03:24:12.4173433Z + flutter_inappwebview_internal_annotations 1.3.0
+2026-07-31T03:24:12.4173944Z + flutter_inappwebview_ios 1.1.2
+2026-07-31T03:24:12.4175094Z + flutter_inappwebview_macos 1.1.2
+2026-07-31T03:24:12.4175670Z + flutter_inappwebview_platform_interface 1.3.0+1
+2026-07-31T03:24:12.4176208Z + flutter_inappwebview_web 1.1.2
+2026-07-31T03:24:12.4176665Z + flutter_inappwebview_windows 0.6.0
+2026-07-31T03:24:12.4177147Z + flutter_keyboard_visibility 6.0.0
+2026-07-31T03:24:12.4177621Z + flutter_keyboard_visibility_linux 1.0.0
+2026-07-31T03:24:12.4178129Z + flutter_keyboard_visibility_macos 1.0.0
+2026-07-31T03:24:12.4178693Z + flutter_keyboard_visibility_platform_interface 2.0.0
+2026-07-31T03:24:12.4179352Z + flutter_keyboard_visibility_web 2.0.0
+2026-07-31T03:24:12.4179886Z + flutter_keyboard_visibility_windows 1.0.0
+2026-07-31T03:24:12.4180453Z + flutter_local_notifications 18.0.1 (22.2.0 available)
+2026-07-31T03:24:12.4181091Z + flutter_local_notifications_linux 5.0.0 (8.0.1 available)
+2026-07-31T03:24:12.4181847Z + flutter_local_notifications_platform_interface 8.0.0 (12.1.0 available)
+2026-07-31T03:24:12.4182572Z + flutter_login_facebook 2.0.1 (4.0.0 available)
+2026-07-31T03:24:12.4183105Z + flutter_plugin_android_lifecycle 2.0.35
+2026-07-31T03:24:12.4183570Z + flutter_svg 2.3.0
+2026-07-31T03:24:12.4183940Z + flutter_test 0.0.0 from sdk flutter
+2026-07-31T03:24:12.4184374Z + flutter_tts 4.2.5
+2026-07-31T03:24:12.4185149Z + flutter_web_plugins 0.0.0 from sdk flutter
+2026-07-31T03:24:12.4185699Z + flutter_widget_from_html 0.15.3 (0.17.2 available)
+2026-07-31T03:24:12.4186322Z + flutter_widget_from_html_core 0.15.2 (0.17.2 available)
+2026-07-31T03:24:12.4186928Z + fwfh_cached_network_image 0.14.3 (0.16.1 available)
+2026-07-31T03:24:12.4187446Z + fwfh_chewie 0.14.8 (0.16.1 available)
+2026-07-31T03:24:12.4187924Z + fwfh_just_audio 0.15.2 (0.17.0 available)
+2026-07-31T03:24:12.4188389Z + fwfh_svg 0.8.3 (0.16.1 available)
+2026-07-31T03:24:12.4188848Z + fwfh_url_launcher 0.9.1 (0.16.1 available)
+2026-07-31T03:24:12.4189311Z + fwfh_webview 0.15.7
+2026-07-31T03:24:12.4189693Z + google_identity_services_web 0.3.3+1
+2026-07-31T03:24:12.4190176Z + google_mobile_ads 5.3.1 (9.0.0 available)
+2026-07-31T03:24:12.4190719Z + google_sign_in 6.3.0 (7.2.0 available)
+2026-07-31T03:24:12.4191216Z + google_sign_in_android 6.2.1 (7.2.15 available)
+2026-07-31T03:24:12.4191747Z + google_sign_in_ios 5.9.0 (6.3.0 available)
+2026-07-31T03:24:12.4192321Z + google_sign_in_platform_interface 2.5.0 (3.1.0 available)
+2026-07-31T03:24:12.4192912Z + google_sign_in_web 0.12.4+4 (1.1.3 available)
+2026-07-31T03:24:12.4193379Z + hive 2.2.3
+2026-07-31T03:24:12.4193700Z + hive_flutter 1.1.0
+2026-07-31T03:24:12.4194058Z + hooks 2.0.2 (2.1.0 available)
+2026-07-31T03:24:12.4194441Z + html 0.15.6
+2026-07-31T03:24:12.4195063Z + html_editor_enhanced 2.6.0 (2.7.1 available)
+2026-07-31T03:24:12.4195545Z + http 1.6.0
+2026-07-31T03:24:12.4195860Z + http_parser 4.1.2
+2026-07-31T03:24:12.4196206Z + image_picker 1.2.3
+2026-07-31T03:24:12.4196574Z + image_picker_android 0.8.13+19
+2026-07-31T03:24:12.4197000Z + image_picker_for_web 3.1.1
+2026-07-31T03:24:12.4197404Z + image_picker_ios 0.8.13+6
+2026-07-31T03:24:12.4197809Z + image_picker_linux 0.2.2
+2026-07-31T03:24:12.4198205Z + image_picker_macos 0.2.2+1
+2026-07-31T03:24:12.4198630Z + image_picker_platform_interface 2.11.1
+2026-07-31T03:24:12.4199103Z + image_picker_windows 0.2.2
+2026-07-31T03:24:12.4199744Z + in_app_review 2.0.12
+2026-07-31T03:24:12.4200144Z + in_app_review_platform_interface 2.0.5
+2026-07-31T03:24:12.4200636Z + infinite_listview 1.1.0
+2026-07-31T03:24:12.4201029Z + intl 0.20.3
+2026-07-31T03:24:12.4201343Z + jni 1.0.3
+2026-07-31T03:24:12.4201627Z + jni_flutter 1.0.2
+2026-07-31T03:24:12.4201925Z + jni_util 1.0.0
+2026-07-31T03:24:12.4202272Z + just_audio 0.9.46 (0.10.6 available)
+2026-07-31T03:24:12.4202715Z + just_audio_platform_interface 4.6.0
+2026-07-31T03:24:12.4203141Z + just_audio_web 0.4.16
+2026-07-31T03:24:12.4203490Z + leak_tracker 11.0.2
+2026-07-31T03:24:12.4203853Z + leak_tracker_flutter_testing 3.0.10
+2026-07-31T03:24:12.4204290Z + leak_tracker_testing 3.0.2
+2026-07-31T03:24:12.4204908Z + lints 4.0.0 (6.1.0 available)
+2026-07-31T03:24:12.4205512Z + list_ext 1.0.6
+2026-07-31T03:24:12.4205864Z + location 8.0.1 (10.0.2 available)
+2026-07-31T03:24:12.4206339Z + location_platform_interface 6.0.1 (7.0.0 available)
+2026-07-31T03:24:12.4206836Z + location_web 6.0.1 (7.0.0 available)
+2026-07-31T03:24:12.4207241Z + logging 1.3.0
+2026-07-31T03:24:12.4207544Z + lottie 3.5.1
+2026-07-31T03:24:12.4207847Z + marqueer 2.5.0
+2026-07-31T03:24:12.4208168Z + matcher 0.12.19 (0.12.20 available)
+2026-07-31T03:24:12.4208587Z + material_color_utilities 0.13.0
+2026-07-31T03:24:12.4208987Z + meta 1.18.0 (1.19.0 available)
+2026-07-31T03:24:12.4209357Z + mime 2.0.0
+2026-07-31T03:24:12.4209700Z ! modal_bottom_sheet 3.0.0 (overridden)
+2026-07-31T03:24:12.4210116Z + nested 1.0.0
+2026-07-31T03:24:12.4210420Z + nm 0.5.0
+2026-07-31T03:24:12.4210740Z + numberpicker 2.1.2
+2026-07-31T03:24:12.4211098Z + objective_c 9.5.0
+2026-07-31T03:24:12.4211439Z + octo_image 2.1.0
+2026-07-31T03:24:12.4211785Z + package_config 3.0.0
+2026-07-31T03:24:12.4212197Z + package_info_plus 9.0.1 (10.2.1 available)
+2026-07-31T03:24:12.4212788Z + package_info_plus_platform_interface 3.2.1 (4.1.0 available)
+2026-07-31T03:24:12.4213346Z + path 1.9.1
+2026-07-31T03:24:12.4213665Z + path_drawing 1.0.1
+2026-07-31T03:24:12.4214017Z + path_parsing 1.1.0
+2026-07-31T03:24:12.4214375Z + path_provider 2.1.6
+2026-07-31T03:24:12.4215013Z + path_provider_android 2.3.1
+2026-07-31T03:24:12.4215453Z + path_provider_foundation 2.6.0
+2026-07-31T03:24:12.4215878Z + path_provider_linux 2.2.2
+2026-07-31T03:24:12.4216303Z + path_provider_platform_interface 2.1.3
+2026-07-31T03:24:12.4216783Z + path_provider_windows 2.3.0
+2026-07-31T03:24:12.4217196Z + percent_indicator 4.2.5
+2026-07-31T03:24:12.4217582Z + petitparser 7.0.2
+2026-07-31T03:24:12.4217930Z + photo_view 0.15.0
+2026-07-31T03:24:12.4218285Z + pin_input_text_field 4.5.2
+2026-07-31T03:24:12.4218679Z + platform 3.1.6
+2026-07-31T03:24:12.4219041Z + plugin_platform_interface 2.1.8
+2026-07-31T03:24:12.4219482Z + pointer_interceptor 0.10.1+2
+2026-07-31T03:24:12.4219922Z + pointer_interceptor_ios 0.10.1+1
+2026-07-31T03:24:12.4220420Z + pointer_interceptor_platform_interface 0.10.0+1
+2026-07-31T03:24:12.4220934Z + pointer_interceptor_web 0.10.3
+2026-07-31T03:24:12.4221328Z + posix 6.5.2
+2026-07-31T03:24:12.4221637Z + provider 6.1.5+1
+2026-07-31T03:24:12.4221971Z + pub_semver 2.2.0
+2026-07-31T03:24:12.4222297Z + quiver 3.2.2
+2026-07-31T03:24:12.4222642Z + record_use 0.6.0 (1.0.0 available)
+2026-07-31T03:24:12.4223065Z + rxdart 0.28.0
+2026-07-31T03:24:12.4223420Z + share_plus 10.1.4 (13.3.0 available)
+2026-07-31T03:24:12.4223939Z + share_plus_platform_interface 5.0.2 (7.2.0 available)
+2026-07-31T03:24:12.4224460Z + shimmer 3.0.0
+2026-07-31T03:24:12.4225071Z + sign_in_with_apple 6.1.4 (8.1.0 available)
+2026-07-31T03:24:12.4225675Z + sign_in_with_apple_platform_interface 1.1.0 (2.0.0 available)
+2026-07-31T03:24:12.4226301Z + sign_in_with_apple_web 2.1.1 (3.0.0 available)
+2026-07-31T03:24:12.4226807Z + sky_engine 0.0.0 from sdk flutter
+2026-07-31T03:24:12.4227237Z + sms_autofill 2.5.0
+2026-07-31T03:24:12.4227596Z + source_span 1.10.2
+2026-07-31T03:24:12.4227949Z + sqflite 2.4.3
+2026-07-31T03:24:12.4228285Z + sqflite_android 2.4.3
+2026-07-31T03:24:12.4228655Z + sqflite_common 2.5.11
+2026-07-31T03:24:12.4229027Z + sqflite_darwin 2.4.3+1
+2026-07-31T03:24:12.4229688Z + sqflite_platform_interface 2.4.1
+2026-07-31T03:24:12.4230124Z + stack_trace 1.12.1
+2026-07-31T03:24:12.4230477Z + stream_channel 2.1.4
+2026-07-31T03:24:12.4230841Z + string_scanner 1.4.1
+2026-07-31T03:24:12.4231203Z + synchronized 3.4.1+1
+2026-07-31T03:24:12.4231559Z + term_glyph 1.2.2
+2026-07-31T03:24:12.4231911Z + test_api 0.7.11 (0.7.13 available)
+2026-07-31T03:24:12.4232349Z + timezone 0.10.1 (0.11.1 available)
+2026-07-31T03:24:12.4232774Z + typed_data 1.4.0
+2026-07-31T03:24:12.4233148Z + unity_ads_plugin 0.3.30 (0.4.0 available)
+2026-07-31T03:24:12.4233610Z + universal_html 2.3.0
+2026-07-31T03:24:12.4233970Z + universal_io 2.3.1
+2026-07-31T03:24:12.4234319Z + url_launcher 6.3.2
+2026-07-31T03:24:12.4235149Z + url_launcher_android 6.3.32
+2026-07-31T03:24:12.4235588Z + url_launcher_ios 6.4.1
+2026-07-31T03:24:12.4236025Z + url_launcher_linux 3.2.2
+2026-07-31T03:24:12.4236424Z + url_launcher_macos 3.2.5
+2026-07-31T03:24:12.4236838Z + url_launcher_platform_interface 2.3.2
+2026-07-31T03:24:12.4237311Z + url_launcher_web 2.4.3
+2026-07-31T03:24:12.4237701Z + url_launcher_windows 3.1.5
+2026-07-31T03:24:12.4238085Z + uuid 4.6.0
+2026-07-31T03:24:12.4238417Z + vector_graphics 1.2.2
+2026-07-31T03:24:12.4238801Z + vector_graphics_codec 1.1.13
+2026-07-31T03:24:12.4239226Z + vector_graphics_compiler 1.3.0
+2026-07-31T03:24:12.4239666Z + vector_math 2.2.0 (2.4.2 available)
+2026-07-31T03:24:12.4240095Z + video_player 2.13.0
+2026-07-31T03:24:12.4240470Z + video_player_android 2.12.0
+2026-07-31T03:24:12.4240890Z + video_player_avfoundation 2.11.0
+2026-07-31T03:24:12.4241349Z + video_player_platform_interface 6.9.0
+2026-07-31T03:24:12.4241805Z + video_player_web 2.4.0
+2026-07-31T03:24:12.4242198Z + visibility_detector 0.4.0+2
+2026-07-31T03:24:12.4242604Z + vm_service 15.2.0
+2026-07-31T03:24:12.4242975Z + wakelock_plus 1.5.2 (1.7.0 available)
+2026-07-31T03:24:12.4243451Z + wakelock_plus_platform_interface 1.6.0
+2026-07-31T03:24:12.4243903Z + web 1.1.1
+2026-07-31T03:24:12.4244224Z + webview_flutter 4.14.1
+2026-07-31T03:24:12.4244845Z ! webview_flutter_android 4.13.0 (overridden)
+2026-07-31T03:24:12.4245375Z + webview_flutter_platform_interface 2.15.1
+2026-07-31T03:24:12.4245872Z + webview_flutter_wkwebview 3.26.0
+2026-07-31T03:24:12.4246302Z + win32 5.15.0 (6.3.0 available)
+2026-07-31T03:24:12.4246711Z + xdg_directories 1.1.0
+2026-07-31T03:24:12.4247087Z + xml 6.6.1 (7.0.1 available)
+2026-07-31T03:24:12.4247487Z + xml2json 6.2.7 (6.2.8 available)
+2026-07-31T03:24:12.4247887Z + yaml 3.1.3
+2026-07-31T03:24:12.4248214Z + youtube_parser 2.1.4
+2026-07-31T03:24:12.4248632Z + youtube_player_flutter 9.1.3 (10.0.1 available)
+2026-07-31T03:24:12.4249167Z Changed 222 dependencies!
+2026-07-31T03:24:12.4249771Z 58 packages have newer versions incompatible with dependency constraints.
+2026-07-31T03:24:12.4250512Z Try `flutter pub outdated` for more information.
+2026-07-31T03:24:12.9571742Z ##[group]Run flutter build apk --release
+2026-07-31T03:24:12.9572109Z [36;1mflutter build apk --release[0m
+2026-07-31T03:24:12.9617579Z shell: /usr/bin/bash -e {0}
+2026-07-31T03:24:12.9617841Z env:
+2026-07-31T03:24:12.9618124Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:24:12.9618562Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.20-8/x64
+2026-07-31T03:24:12.9619029Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.8-x64/flutter
+2026-07-31T03:24:12.9619425Z   PUB_CACHE: /home/runner/.pub-cache
+2026-07-31T03:24:12.9619695Z ##[endgroup]
+2026-07-31T03:24:13.6690533Z Upgrading gradle.properties
+2026-07-31T03:24:13.6707393Z Upgrading gradle.properties
+2026-07-31T03:25:46.4586519Z Warning: Flutter support for your project's Gradle version (8.10.2) will soon be dropped. Please upgrade your Gradle version to a version of at least 8.14.0 soon.
+2026-07-31T03:25:46.4588005Z Running Gradle task 'assembleRelease'...                        
+2026-07-31T03:25:46.4615861Z Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+2026-07-31T03:25:46.4616622Z 
+2026-07-31T03:25:46.4646704Z Potential fix: Your project's gradle version is typically defined in the gradle wrapper file. By default, this can be found at /home/runner/work/Peacock-news/Peacock-news/flutter_app/android/gradle/wrapper/gradle-wrapper.properties. 
+2026-07-31T03:25:46.4655821Z For more information, see https://docs.gradle.org/current/userguide/gradle_wrapper.html.
+2026-07-31T03:25:46.4685178Z 
+2026-07-31T03:25:46.4716835Z Warning: Flutter support for your project's Android Gradle Plugin version (Android Gradle Plugin version 8.8.0) will soon be dropped. Please upgrade your Android Gradle Plugin version to a version of at least Android Gradle Plugin version 8.11.1 soon.
+2026-07-31T03:25:46.4741748Z Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+2026-07-31T03:25:46.4765261Z 
+2026-07-31T03:25:46.4767380Z Potential fix: Your project's AGP version is typically defined in the plugins block of the `settings.gradle` file (/home/runner/work/Peacock-news/Peacock-news/flutter_app/android/settings.gradle), by a plugin with the id of com.android.application. 
+2026-07-31T03:25:46.4771163Z If you don't see a plugins block, your project was likely created with an older template version. In this case it is most likely defined in the top-level build.gradle file (/home/runner/work/Peacock-news/Peacock-news/flutter_app/android/build.gradle) by the following line in the dependencies block of the buildscript: "classpath 'com.android.tools.build:gradle:<version>'".
+2026-07-31T03:25:46.4773485Z 
+2026-07-31T03:25:46.4774423Z Warning: Flutter support for your project's Kotlin version (2.1.10) will soon be dropped. Please upgrade your Kotlin version to a version of at least 2.2.20 soon.
+2026-07-31T03:25:46.4776245Z Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
+2026-07-31T03:25:46.4777078Z 
+2026-07-31T03:25:46.4778527Z Potential fix: Your project's KGP version is typically defined in the plugins block of the `settings.gradle` file (/home/runner/work/Peacock-news/Peacock-news/flutter_app/android/settings.gradle), by a plugin with the id of org.jetbrains.kotlin.android. 
+2026-07-31T03:25:46.4781678Z If you don't see a plugins block, your project was likely created with an older template version, in which case it is most likely defined in the top-level build.gradle file (/home/runner/work/Peacock-news/Peacock-news/flutter_app/android/build.gradle) by the ext.kotlin_version property.
+2026-07-31T03:25:46.4783540Z 
+2026-07-31T03:28:19.6347898Z lib/ui/widgets/breakingNewsItem.dart:96:24: Error: The getter 'nativeAdsIndex' isn't defined for the type 'BreakNewsItemState'.
+2026-07-31T03:28:19.6350164Z  - 'BreakNewsItemState' is from 'package:news/ui/widgets/breakingNewsItem.dart' ('lib/ui/widgets/breakingNewsItem.dart').
+2026-07-31T03:28:19.6352330Z Try correcting the name to the name of an existing getter, or defining a getter or field named 'nativeAdsIndex'.
+2026-07-31T03:28:19.6357069Z         widget.index % nativeAdsIndex == 0) {
+2026-07-31T03:28:19.6357712Z                        ^^^^^^^^^^^^^^
+2026-07-31T03:28:21.3354427Z lib/ui/screens/HomePage/Widgets/SectionStyle3.dart:53:54: Error: The getter 'nativeAdsIndex' isn't defined for the type 'Style3Section'.
+2026-07-31T03:28:21.3357380Z  - 'Style3Section' is from 'package:news/ui/screens/HomePage/Widgets/SectionStyle3.dart' ('lib/ui/screens/HomePage/Widgets/SectionStyle3.dart').
+2026-07-31T03:28:21.3359554Z Try correcting the name to the name of an existing getter, or defining a getter or field named 'nativeAdsIndex'.
+2026-07-31T03:28:21.3360916Z                           if ((index != 0 && index % nativeAdsIndex == 0) &&
+2026-07-31T03:28:21.3361654Z                                                      ^^^^^^^^^^^^^^
+2026-07-31T03:28:21.3362763Z lib/ui/screens/HomePage/Widgets/SectionStyle3.dart:140:54: Error: The getter 'nativeAdsIndex' isn't defined for the type 'Style3Section'.
+2026-07-31T03:28:21.3363765Z  - 'Style3Section' is from 'package:news/ui/screens/HomePage/Widgets/SectionStyle3.dart' ('lib/ui/screens/HomePage/Widgets/SectionStyle3.dart').
+2026-07-31T03:28:21.3365732Z Try correcting the name to the name of an existing getter, or defining a getter or field named 'nativeAdsIndex'.
+2026-07-31T03:28:21.3366294Z                           if ((index != 0 && index % nativeAdsIndex == 0) &&
+2026-07-31T03:28:21.3366645Z                                                      ^^^^^^^^^^^^^^
+2026-07-31T03:28:28.8343615Z Target kernel_snapshot_program failed: Exception
+2026-07-31T03:28:28.8346906Z 
+2026-07-31T03:28:28.9356120Z 
+2026-07-31T03:28:28.9412140Z FAILURE: Build completed with 2 failures.
+2026-07-31T03:28:28.9444492Z 
+2026-07-31T03:28:28.9525560Z 1: Task failed with an exception.
+2026-07-31T03:28:28.9526889Z -----------
+2026-07-31T03:28:28.9527928Z * What went wrong:
+2026-07-31T03:28:28.9585758Z Execution failed for task ':app:checkReleaseAarMetadata'.
+2026-07-31T03:28:28.9615502Z > A failure occurred while executing com.android.build.gradle.internal.tasks.CheckAarMetadataWorkAction
+2026-07-31T03:28:28.9617716Z    > 23 issues were found when checking AAR metadata:
+2026-07-31T03:28:28.9619731Z 
+2026-07-31T03:28:28.9620704Z        1.  Dependency 'androidx.browser:browser:1.9.0' requires libraries and applications that
+2026-07-31T03:28:28.9622111Z            depend on it to compile against version 36 or later of the
+2026-07-31T03:28:28.9623137Z            Android APIs.
+2026-07-31T03:28:28.9636521Z 
+2026-07-31T03:28:28.9638615Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9639365Z 
+2026-07-31T03:28:28.9640120Z            Also, the maximum recommended compile SDK version for Android Gradle
+2026-07-31T03:28:28.9641360Z            plugin 8.8.0 is 35.
+2026-07-31T03:28:28.9641984Z 
+2026-07-31T03:28:28.9646528Z            Recommended action: Update this project's version of the Android Gradle
+2026-07-31T03:28:28.9647881Z            plugin to one that supports 36, then update this project to use
+2026-07-31T03:28:28.9649180Z            compileSdk of at least 36.
+2026-07-31T03:28:28.9649895Z 
+2026-07-31T03:28:28.9650493Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9651867Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9672520Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9673822Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9674913Z            on).
+2026-07-31T03:28:28.9675359Z 
+2026-07-31T03:28:28.9676069Z        2.  Dependency 'androidx.browser:browser:1.9.0' requires Android Gradle plugin 8.9.1 or higher.
+2026-07-31T03:28:28.9676941Z 
+2026-07-31T03:28:28.9677383Z            This build currently uses Android Gradle plugin 8.8.0.
+2026-07-31T03:28:28.9677999Z 
+2026-07-31T03:28:28.9679023Z        3.  Dependency 'androidx.activity:activity-ktx:1.12.4' requires libraries and applications that
+2026-07-31T03:28:28.9680182Z            depend on it to compile against version 36 or later of the
+2026-07-31T03:28:28.9680902Z            Android APIs.
+2026-07-31T03:28:28.9681288Z 
+2026-07-31T03:28:28.9681654Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9682151Z 
+2026-07-31T03:28:28.9682665Z            Also, the maximum recommended compile SDK version for Android Gradle
+2026-07-31T03:28:28.9683558Z            plugin 8.8.0 is 35.
+2026-07-31T03:28:28.9684043Z 
+2026-07-31T03:28:28.9685002Z            Recommended action: Update this project's version of the Android Gradle
+2026-07-31T03:28:28.9686163Z            plugin to one that supports 36, then update this project to use
+2026-07-31T03:28:28.9687147Z            compileSdk of at least 36.
+2026-07-31T03:28:28.9687755Z 
+2026-07-31T03:28:28.9688386Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9689554Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9690654Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9692048Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9692949Z            on).
+2026-07-31T03:28:28.9693395Z 
+2026-07-31T03:28:28.9694170Z        4.  Dependency 'androidx.activity:activity-ktx:1.12.4' requires Android Gradle plugin 8.9.1 or higher.
+2026-07-31T03:28:28.9695854Z 
+2026-07-31T03:28:28.9696372Z            This build currently uses Android Gradle plugin 8.8.0.
+2026-07-31T03:28:28.9697160Z 
+2026-07-31T03:28:28.9697865Z        5.  Dependency 'androidx.activity:activity:1.12.4' requires libraries and applications that
+2026-07-31T03:28:28.9699117Z            depend on it to compile against version 36 or later of the
+2026-07-31T03:28:28.9699991Z            Android APIs.
+2026-07-31T03:28:28.9700498Z 
+2026-07-31T03:28:28.9700950Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9701606Z 
+2026-07-31T03:28:28.9702180Z            Also, the maximum recommended compile SDK version for Android Gradle
+2026-07-31T03:28:28.9703162Z            plugin 8.8.0 is 35.
+2026-07-31T03:28:28.9703682Z 
+2026-07-31T03:28:28.9704295Z            Recommended action: Update this project's version of the Android Gradle
+2026-07-31T03:28:28.9705702Z            plugin to one that supports 36, then update this project to use
+2026-07-31T03:28:28.9706793Z            compileSdk of at least 36.
+2026-07-31T03:28:28.9707424Z 
+2026-07-31T03:28:28.9707999Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9709088Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9710174Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9711231Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9712130Z            on).
+2026-07-31T03:28:28.9712588Z 
+2026-07-31T03:28:28.9713313Z        6.  Dependency 'androidx.activity:activity:1.12.4' requires Android Gradle plugin 8.9.1 or higher.
+2026-07-31T03:28:28.9714285Z 
+2026-07-31T03:28:28.9715028Z            This build currently uses Android Gradle plugin 8.8.0.
+2026-07-31T03:28:28.9715629Z 
+2026-07-31T03:28:28.9716457Z        7.  Dependency 'androidx.navigationevent:navigationevent-android:1.0.2' requires libraries and applications that
+2026-07-31T03:28:28.9717807Z            depend on it to compile against version 36 or later of the
+2026-07-31T03:28:28.9718615Z            Android APIs.
+2026-07-31T03:28:28.9719064Z 
+2026-07-31T03:28:28.9719485Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9720069Z 
+2026-07-31T03:28:28.9720587Z            Also, the maximum recommended compile SDK version for Android Gradle
+2026-07-31T03:28:28.9721474Z            plugin 8.8.0 is 35.
+2026-07-31T03:28:28.9721968Z 
+2026-07-31T03:28:28.9722799Z            Recommended action: Update this project's version of the Android Gradle
+2026-07-31T03:28:28.9723930Z            plugin to one that supports 36, then update this project to use
+2026-07-31T03:28:28.9725121Z            compileSdk of at least 36.
+2026-07-31T03:28:28.9725786Z 
+2026-07-31T03:28:28.9726320Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9727443Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9728562Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9729603Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9730512Z            on).
+2026-07-31T03:28:28.9730939Z 
+2026-07-31T03:28:28.9731855Z        8.  Dependency 'androidx.navigationevent:navigationevent-android:1.0.2' requires Android Gradle plugin 8.9.1 or higher.
+2026-07-31T03:28:28.9732941Z 
+2026-07-31T03:28:28.9733403Z            This build currently uses Android Gradle plugin 8.8.0.
+2026-07-31T03:28:28.9734058Z 
+2026-07-31T03:28:28.9735022Z        9.  Dependency 'androidx.media3:media3-extractor:1.9.2' requires libraries and applications that
+2026-07-31T03:28:28.9736517Z            depend on it to compile against version 35 or later of the
+2026-07-31T03:28:28.9737334Z            Android APIs.
+2026-07-31T03:28:28.9737772Z 
+2026-07-31T03:28:28.9738183Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9738778Z 
+2026-07-31T03:28:28.9739323Z            Recommended action: Update this project to use a newer compileSdk
+2026-07-31T03:28:28.9740208Z            of at least 35, for example 35.
+2026-07-31T03:28:28.9740713Z 
+2026-07-31T03:28:28.9741215Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9742216Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9743172Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9744167Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9745246Z            on).
+2026-07-31T03:28:28.9745659Z 
+2026-07-31T03:28:28.9746402Z       10.  Dependency 'androidx.media3:media3-container:1.9.2' requires libraries and applications that
+2026-07-31T03:28:28.9747628Z            depend on it to compile against version 35 or later of the
+2026-07-31T03:28:28.9748526Z            Android APIs.
+2026-07-31T03:28:28.9748960Z 
+2026-07-31T03:28:28.9749398Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9750019Z 
+2026-07-31T03:28:28.9750565Z            Recommended action: Update this project to use a newer compileSdk
+2026-07-31T03:28:28.9751475Z            of at least 35, for example 35.
+2026-07-31T03:28:28.9752015Z 
+2026-07-31T03:28:28.9752555Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9753601Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9755016Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9756136Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9757039Z            on).
+2026-07-31T03:28:28.9757479Z 
+2026-07-31T03:28:28.9758393Z       11.  Dependency 'androidx.media3:media3-datasource:1.9.2' requires libraries and applications that
+2026-07-31T03:28:28.9759782Z            depend on it to compile against version 35 or later of the
+2026-07-31T03:28:28.9760652Z            Android APIs.
+2026-07-31T03:28:28.9761163Z 
+2026-07-31T03:28:28.9761616Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9762279Z 
+2026-07-31T03:28:28.9762846Z            Recommended action: Update this project to use a newer compileSdk
+2026-07-31T03:28:28.9763818Z            of at least 35, for example 35.
+2026-07-31T03:28:28.9764399Z 
+2026-07-31T03:28:28.9765228Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9766647Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9767823Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9768907Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9769822Z            on).
+2026-07-31T03:28:28.9770251Z 
+2026-07-31T03:28:28.9770985Z       12.  Dependency 'androidx.media3:media3-decoder:1.9.2' requires libraries and applications that
+2026-07-31T03:28:28.9772224Z            depend on it to compile against version 35 or later of the
+2026-07-31T03:28:28.9773116Z            Android APIs.
+2026-07-31T03:28:28.9773608Z 
+2026-07-31T03:28:28.9774058Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9774936Z 
+2026-07-31T03:28:28.9775481Z            Recommended action: Update this project to use a newer compileSdk
+2026-07-31T03:28:28.9776392Z            of at least 35, for example 35.
+2026-07-31T03:28:28.9776935Z 
+2026-07-31T03:28:28.9777468Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9778524Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9779837Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9780897Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9781738Z            on).
+2026-07-31T03:28:28.9782147Z 
+2026-07-31T03:28:28.9782865Z       13.  Dependency 'androidx.media3:media3-database:1.9.2' requires libraries and applications that
+2026-07-31T03:28:28.9784067Z            depend on it to compile against version 35 or later of the
+2026-07-31T03:28:28.9785156Z            Android APIs.
+2026-07-31T03:28:28.9785619Z 
+2026-07-31T03:28:28.9786047Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9786654Z 
+2026-07-31T03:28:28.9797863Z            Recommended action: Update this project to use a newer compileSdk
+2026-07-31T03:28:28.9825446Z            of at least 35, for example 35.
+2026-07-31T03:28:28.9855091Z 
+2026-07-31T03:28:28.9875654Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9885640Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9915473Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9945495Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9962203Z            on).
+2026-07-31T03:28:28.9962608Z 
+2026-07-31T03:28:28.9963270Z       14.  Dependency 'androidx.media3:media3-common:1.9.2' requires libraries and applications that
+2026-07-31T03:28:28.9964283Z            depend on it to compile against version 35 or later of the
+2026-07-31T03:28:28.9965256Z            Android APIs.
+2026-07-31T03:28:28.9965647Z 
+2026-07-31T03:28:28.9966023Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9966538Z 
+2026-07-31T03:28:28.9967015Z            Recommended action: Update this project to use a newer compileSdk
+2026-07-31T03:28:28.9967771Z            of at least 35, for example 35.
+2026-07-31T03:28:28.9968238Z 
+2026-07-31T03:28:28.9968675Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9969527Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9970372Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9971202Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9971884Z            on).
+2026-07-31T03:28:28.9972218Z 
+2026-07-31T03:28:28.9972852Z       15.  Dependency 'androidx.media3:media3-exoplayer-hls:1.9.2' requires libraries and applications that
+2026-07-31T03:28:28.9973874Z            depend on it to compile against version 35 or later of the
+2026-07-31T03:28:28.9974544Z            Android APIs.
+2026-07-31T03:28:28.9975172Z 
+2026-07-31T03:28:28.9976021Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9976730Z 
+2026-07-31T03:28:28.9977264Z            Recommended action: Update this project to use a newer compileSdk
+2026-07-31T03:28:28.9978177Z            of at least 35, for example 35.
+2026-07-31T03:28:28.9978703Z 
+2026-07-31T03:28:28.9979215Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9980217Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9981204Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9982169Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9983019Z            on).
+2026-07-31T03:28:28.9983422Z 
+2026-07-31T03:28:28.9984161Z       16.  Dependency 'androidx.media3:media3-exoplayer-dash:1.9.2' requires libraries and applications that
+2026-07-31T03:28:28.9985651Z            depend on it to compile against version 35 or later of the
+2026-07-31T03:28:28.9986584Z            Android APIs.
+2026-07-31T03:28:28.9987100Z 
+2026-07-31T03:28:28.9987565Z            :app is currently compiled against android-34.
+2026-07-31T03:28:28.9988527Z 
+2026-07-31T03:28:28.9989087Z            Recommended action: Update this project to use a newer compileSdk
+2026-07-31T03:28:28.9990003Z            of at least 35, for example 35.
+2026-07-31T03:28:28.9990550Z 
+2026-07-31T03:28:28.9991095Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:28.9992238Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:28.9993381Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:28.9994490Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:28.9995693Z            on).
+2026-07-31T03:28:28.9996150Z 
+2026-07-31T03:28:28.9997139Z       17.  Dependency 'androidx.media3:media3-exoplayer-smoothstreaming:1.9.2' requires libraries and applications that
+2026-07-31T03:28:28.9998611Z            depend on it to compile against version 35 or later of the
+2026-07-31T03:28:28.9999492Z            Android APIs.
+2026-07-31T03:28:29.0000014Z 
+2026-07-31T03:28:29.0000447Z            :app is currently compiled against android-34.
+2026-07-31T03:28:29.0000978Z 
+2026-07-31T03:28:29.0001436Z            Recommended action: Update this project to use a newer compileSdk
+2026-07-31T03:28:29.0002214Z            of at least 35, for example 35.
+2026-07-31T03:28:29.0002653Z 
+2026-07-31T03:28:29.0003090Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:29.0003954Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:29.0005088Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:29.0006130Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:29.0006856Z            on).
+2026-07-31T03:28:29.0007204Z 
+2026-07-31T03:28:29.0007872Z       18.  Dependency 'androidx.media3:media3-exoplayer-rtsp:1.9.2' requires libraries and applications that
+2026-07-31T03:28:29.0008914Z            depend on it to compile against version 35 or later of the
+2026-07-31T03:28:29.0009586Z            Android APIs.
+2026-07-31T03:28:29.0009963Z 
+2026-07-31T03:28:29.0010324Z            :app is currently compiled against android-34.
+2026-07-31T03:28:29.0010826Z 
+2026-07-31T03:28:29.0011267Z            Recommended action: Update this project to use a newer compileSdk
+2026-07-31T03:28:29.0012009Z            of at least 35, for example 35.
+2026-07-31T03:28:29.0012449Z 
+2026-07-31T03:28:29.0012872Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:29.0013719Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:29.0014553Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:29.0016050Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:29.0016833Z            on).
+2026-07-31T03:28:29.0017206Z 
+2026-07-31T03:28:29.0017875Z       19.  Dependency 'androidx.media3:media3-exoplayer:1.9.2' requires libraries and applications that
+2026-07-31T03:28:29.0018995Z            depend on it to compile against version 35 or later of the
+2026-07-31T03:28:29.0019720Z            Android APIs.
+2026-07-31T03:28:29.0020115Z 
+2026-07-31T03:28:29.0020469Z            :app is currently compiled against android-34.
+2026-07-31T03:28:29.0020979Z 
+2026-07-31T03:28:29.0021428Z            Recommended action: Update this project to use a newer compileSdk
+2026-07-31T03:28:29.0022183Z            of at least 35, for example 35.
+2026-07-31T03:28:29.0022620Z 
+2026-07-31T03:28:29.0023054Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:29.0023904Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:29.0024969Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:29.0025821Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:29.0026739Z            on).
+2026-07-31T03:28:29.0027080Z 
+2026-07-31T03:28:29.0027622Z       20.  Dependency 'androidx.core:core-ktx:1.18.0' requires libraries and applications that
+2026-07-31T03:28:29.0028550Z            depend on it to compile against version 36 or later of the
+2026-07-31T03:28:29.0029215Z            Android APIs.
+2026-07-31T03:28:29.0029589Z 
+2026-07-31T03:28:29.0029945Z            :app is currently compiled against android-34.
+2026-07-31T03:28:29.0030442Z 
+2026-07-31T03:28:29.0030894Z            Also, the maximum recommended compile SDK version for Android Gradle
+2026-07-31T03:28:29.0031628Z            plugin 8.8.0 is 35.
+2026-07-31T03:28:29.0032021Z 
+2026-07-31T03:28:29.0032496Z            Recommended action: Update this project's version of the Android Gradle
+2026-07-31T03:28:29.0033384Z            plugin to one that supports 36, then update this project to use
+2026-07-31T03:28:29.0034102Z            compileSdk of at least 36.
+2026-07-31T03:28:29.0034525Z 
+2026-07-31T03:28:29.0035191Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:29.0036041Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:29.0036882Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:29.0037769Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:29.0038500Z            on).
+2026-07-31T03:28:29.0038856Z 
+2026-07-31T03:28:29.0039421Z       21.  Dependency 'androidx.core:core-ktx:1.18.0' requires Android Gradle plugin 8.9.1 or higher.
+2026-07-31T03:28:29.0040182Z 
+2026-07-31T03:28:29.0040576Z            This build currently uses Android Gradle plugin 8.8.0.
+2026-07-31T03:28:29.0041112Z 
+2026-07-31T03:28:29.0041636Z       22.  Dependency 'androidx.core:core:1.18.0' requires libraries and applications that
+2026-07-31T03:28:29.0042542Z            depend on it to compile against version 36 or later of the
+2026-07-31T03:28:29.0043207Z            Android APIs.
+2026-07-31T03:28:29.0043597Z 
+2026-07-31T03:28:29.0043959Z            :app is currently compiled against android-34.
+2026-07-31T03:28:29.0044448Z 
+2026-07-31T03:28:29.0045214Z            Also, the maximum recommended compile SDK version for Android Gradle
+2026-07-31T03:28:29.0045972Z            plugin 8.8.0 is 35.
+2026-07-31T03:28:29.0046365Z 
+2026-07-31T03:28:29.0046968Z            Recommended action: Update this project's version of the Android Gradle
+2026-07-31T03:28:29.0047873Z            plugin to one that supports 36, then update this project to use
+2026-07-31T03:28:29.0048591Z            compileSdk of at least 36.
+2026-07-31T03:28:29.0049016Z 
+2026-07-31T03:28:29.0049429Z            Note that updating a library or application's compileSdk (which
+2026-07-31T03:28:29.0050518Z            allows newer APIs to be used) can be done separately from updating
+2026-07-31T03:28:29.0051400Z            targetSdk (which opts the app in to new runtime behavior) and
+2026-07-31T03:28:29.0052331Z            minSdk (which determines which devices the app can be installed
+2026-07-31T03:28:29.0053093Z            on).
+2026-07-31T03:28:29.0053453Z 
+2026-07-31T03:28:29.0054058Z       23.  Dependency 'androidx.core:core:1.18.0' requires Android Gradle plugin 8.9.1 or higher.
+2026-07-31T03:28:29.0055097Z 
+2026-07-31T03:28:29.0055527Z            This build currently uses Android Gradle plugin 8.8.0.
+2026-07-31T03:28:29.0056088Z 
+2026-07-31T03:28:29.0056375Z * Try:
+2026-07-31T03:28:29.0056896Z > Run with --stacktrace option to get the stack trace.
+2026-07-31T03:28:29.0057626Z > Run with --info or --debug option to get more log output.
+2026-07-31T03:28:29.0058294Z > Run with --scan to get full insights.
+2026-07-31T03:28:29.0058924Z > Get more help at https://help.gradle.org.
+2026-07-31T03:28:29.0059643Z ==============================================================================
+2026-07-31T03:28:29.0060153Z 
+2026-07-31T03:28:29.0060468Z 2: Task failed with an exception.
+2026-07-31T03:28:29.0061038Z -----------
+2026-07-31T03:28:29.0061819Z * What went wrong:
+2026-07-31T03:28:29.0062477Z Execution failed for task ':app:compileFlutterBuildRelease'.
+2026-07-31T03:28:29.0063796Z > Process 'command '/opt/hostedtoolcache/flutter/stable-3.44.8-x64/flutter/bin/flutter'' finished with non-zero exit value 1
+2026-07-31T03:28:29.0065007Z 
+2026-07-31T03:28:29.0065324Z * Try:
+2026-07-31T03:28:29.0065881Z > Run with --stacktrace option to get the stack trace.
+2026-07-31T03:28:29.0066608Z > Run with --info or --debug option to get more log output.
+2026-07-31T03:28:29.0067365Z > Run with --scan to get full insights.
+2026-07-31T03:28:29.0068008Z > Get more help at https://help.gradle.org.
+2026-07-31T03:28:29.0068753Z ==============================================================================
+2026-07-31T03:28:29.0069318Z 
+2026-07-31T03:28:29.0069642Z BUILD FAILED in 4m 15s
+2026-07-31T03:28:29.5180185Z Running Gradle task 'assembleRelease'...                          255.8s
+2026-07-31T03:28:29.5278103Z Gradle task assembleRelease failed with exit code 1
+2026-07-31T03:28:29.5345536Z ##[error]Process completed with exit code 1.
+2026-07-31T03:28:29.5540851Z Post job cleanup.
+2026-07-31T03:28:29.5606595Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-31T03:28:29.5607843Z Post job cleanup.
+2026-07-31T03:28:29.8955200Z (node:3576) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-31T03:28:29.8956525Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-31T03:28:29.9162766Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-31T03:28:29.9180588Z Post job cleanup.
+2026-07-31T03:28:30.0200173Z [command]/usr/bin/git version
+2026-07-31T03:28:30.0249726Z git version 2.54.0
+2026-07-31T03:28:30.0291469Z Temporarily overriding HOME='/home/runner/work/_temp/d37d28e6-e7f5-4da7-bb01-d94af56574db' before making global git config changes
+2026-07-31T03:28:30.0292773Z Adding repository directory to the temporary git global config as a safe directory
+2026-07-31T03:28:30.0298683Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Peacock-news/Peacock-news
+2026-07-31T03:28:30.0343160Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-07-31T03:28:30.0390815Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-07-31T03:28:30.0725196Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-07-31T03:28:30.0757089Z http.https://github.com/.extraheader
+2026-07-31T03:28:30.0770914Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-07-31T03:28:30.0819865Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-07-31T03:28:30.1119091Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-07-31T03:28:30.1164812Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-07-31T03:28:30.1568051Z Cleaning up orphan processes
+2026-07-31T03:28:30.1998968Z Terminate orphan process: pid (3192) (java)
+2026-07-31T03:28:30.2062092Z Terminate orphan process: pid (3314) (java)
+2026-07-31T03:28:30.2073797Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

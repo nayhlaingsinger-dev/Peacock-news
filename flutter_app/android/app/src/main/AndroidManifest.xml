@@ -47,15 +47,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                  <data
-                    android:host="enter_your_website_url_here"
+                    android:host="redpeacock.fxgalactic.space"
                     android:pathPattern="/video-news/.*"
                     android:scheme="news" />
                     <data
-                    android:host="enter_your_website_url_here"
+                    android:host="redpeacock.fxgalactic.space"
                     android:pathPattern="/breaking-news/.*"
                     android:scheme="news" />
                     <data
-                    android:host="enter_your_website_url_here"
+                    android:host="redpeacock.fxgalactic.space"
                     android:pathPattern="/news/.*"
                     android:scheme="news" />
             </intent-filter>
