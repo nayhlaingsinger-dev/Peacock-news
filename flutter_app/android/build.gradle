@@ -13,6 +13,17 @@ subprojects {
                 project.plugins.hasPlugin("com.android.library")) {
             project.android {
                 compileSdkVersion 36
+                
+                compileOptions {
+                    sourceCompatibility = JavaVersion.VERSION_17
+                    targetCompatibility = JavaVersion.VERSION_17
+                }
+
+                if (project.plugins.hasPlugin("kotlin-android")) {
+                    kotlinOptions {
+                        jvmTarget = "17"
+                    }
+                }
             }
         }
         if (project.hasProperty('android')) {
