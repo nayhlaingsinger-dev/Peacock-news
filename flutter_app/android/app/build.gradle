@@ -17,7 +17,7 @@ def keystoreProperties = new Properties()
 android {
     testOptions.unitTests.includeAndroidResources = true
     namespace 'com.redpeacock.news' 
-    compileSdk 36
+    compileSdk 34
     ndkVersion flutter.ndkVersion
     // "27.0.12077973"
 
@@ -35,8 +35,8 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.redpeacock.news"
-        minSdk 27  //flutter.minSdkVersion
-        targetSdk 35
+        minSdk 21
+        targetSdk 34
         multiDexEnabled true
         versionCode flutter.versionCode
         versionName flutter.versionName
