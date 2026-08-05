@@ -16,12 +16,12 @@ const bool fblogInEnabled = false;
 const int surveyShow = 4;
 
 //set value for native ads show after news data (Now controlled from Admin Panel)
-const int nativeAdsIndex = 4;
 
 //set value for interstitial ads show after news data
 const int interstitialAdsIndex = 2;
 
 //set value for reward ads show after news data
 const int rewardAdsIndex = 4;
+const int nativeAdsIndex = 5;
 
 const String appName = 'RedPeacock';

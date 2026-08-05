@@ -17,27 +17,26 @@ def keystoreProperties = new Properties()
 android {
     testOptions.unitTests.includeAndroidResources = true
     namespace 'com.redpeacock.news' 
-    compileSdk 34
+    compileSdk 36
     ndkVersion flutter.ndkVersion
     // "27.0.12077973"
 
     compileOptions { 
         coreLibraryDesugaringEnabled true
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_1_8  
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-         jvmTarget = "17"
-        freeCompilerArgs += "-Xskip-metadata-version-check"
+         jvmTarget = JavaVersion.VERSION_1_8
     }
  
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.redpeacock.news"
-        minSdk 21
-        targetSdk 34
+        minSdk 27  //flutter.minSdkVersion
+        targetSdk 35
         multiDexEnabled true
         versionCode flutter.versionCode
         versionName flutter.versionName
@@ -59,7 +58,7 @@ android {
             minifyEnabled false  // Change from true to false
             shrinkResources false  // Change from true to false
             // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug // Changed to debug for GitHub Actions build to pass without keystore
+            signingConfig signingConfigs.release //Change it to signingConfigs.release for release apk
         }
     }
 } 
@@ -71,8 +70,8 @@ flutter {
 }
 
 dependencies {
-    implementation 'androidx.multidex:multidex:2.0.1'
-    implementation platform('com.google.firebase:firebase-bom:33.2.0')
+    implementation 'com.android.support:multidex:2.0.1'
+    implementation platform('com.google.firebase:firebase-bom:32.3.1')
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.android.gms:play-services-ads:23.6.0'
     implementation 'com.google.android.gms:play-services-measurement-api:21.6.1'
