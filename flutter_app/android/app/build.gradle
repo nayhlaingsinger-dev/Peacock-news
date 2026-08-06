@@ -2,94 +2,76 @@ plugins {
     id "com.android.application"
     id "kotlin-android"
     id "com.google.gms.google-services"
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
 }
 
-
-// googleServices.disableVersionCheck = true
 def keystoreProperties = new Properties()
-    def keystorePropertiesFile = rootProject.file('key.properties')
-    if (keystorePropertiesFile.exists()) {
-        keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
-    }
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
 
 android {
-    testOptions.unitTests.includeAndroidResources = true
-    namespace 'com.redpeacock.news' 
-    compileSdk 36
+    namespace 'com.redpeacock.news'
+    compileSdk 34
     ndkVersion flutter.ndkVersion
-    // "27.0.12077973"
 
-    compileOptions { 
-        coreLibraryDesugaringEnabled true
-        sourceCompatibility = JavaVersion.VERSION_1_8  
-        targetCompatibility = JavaVersion.VERSION_1_8
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-         jvmTarget = JavaVersion.VERSION_1_8
+        jvmTarget = JavaVersion.VERSION_11
     }
- 
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.redpeacock.news"
-        minSdk 27  //flutter.minSdkVersion
-        targetSdk 35
-        multiDexEnabled true
-        versionCode flutter.versionCode
+        minSdk 24
+        targetSdk 34
+        versionCode flutter.versionCode.toInteger()
         versionName flutter.versionName
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    //Don't Change Signing Configs below.
+
     signingConfigs {
-       debug {
-           keyAlias keystoreProperties['keyAlias'] ?: 'androiddebugkey'
-           keyPassword keystoreProperties['keyPassword'] ?: 'android'
-           storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : file(System.getProperty('user.home') + '/.android/debug.keystore')
-           storePassword keystoreProperties['storePassword'] ?: 'android'
-       }
-       release {
-           keyAlias keystoreProperties['keyAlias'] ?: 'androiddebugkey'
-           keyPassword keystoreProperties['keyPassword'] ?: 'android'
-           storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : file(System.getProperty('user.home') + '/.android/debug.keystore')
-           storePassword keystoreProperties['storePassword'] ?: 'android'
-       }
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file(System.getProperty('user.home') + '/.android/debug.keystore')
+            storePassword 'android'
+        }
+        release {
+            keyAlias keystoreProperties['keyAlias'] ?: 'androiddebugkey'
+            keyPassword keystoreProperties['keyPassword'] ?: 'android'
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : file(System.getProperty('user.home') + '/.android/debug.keystore')
+            storePassword keystoreProperties['storePassword'] ?: 'android'
+        }
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            minifyEnabled false  // Change from true to false
-            shrinkResources false  // Change from true to false
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug //Use debug keystore for now
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+        }
+        debug {
+            signingConfig signingConfigs.debug
         }
     }
-} 
-
-
+}
 
 flutter {
     source '../..'
 }
 
 dependencies {
-    implementation 'com.android.support:multidex:2.0.1'
     implementation platform('com.google.firebase:firebase-bom:32.3.1')
     implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.android.gms:play-services-ads:23.6.0'
-    implementation 'com.google.android.gms:play-services-measurement-api:21.6.1'
     implementation 'com.google.android.gms:play-services-auth:21.3.0'
-    implementation 'com.google.firebase:firebase-analytics' 
-    implementation 'com.google.guava:guava:30.1.1-android'
-    implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
     implementation 'com.google.android.ump:user-messaging-platform:2.1.0'
-    implementation 'com.google.android.recaptcha:recaptcha:18.4.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
- }
- 
+    implementation 'com.facebook.android:facebook-android-sdk:[8,9)'
+    implementation 'com.google.guava:guava:30.1.1-android'
+}
